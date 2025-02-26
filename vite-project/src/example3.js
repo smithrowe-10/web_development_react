@@ -12,4 +12,15 @@ class Person{
     this.lastName = lastName;
   }
 }
+/**
+ * 상속 : extends 키워드를 사용.
+ */
 
+class Employee extends Person() {
+  // 생성자 명령어
+  constructor(firstName, lastName, salary) {
+    // 부모 클래스의 생성자 불러오는 키워드 super
+    super(firstName, lastName);
+    this.salary = salary;
+  }
+}

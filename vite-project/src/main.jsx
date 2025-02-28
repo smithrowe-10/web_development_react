@@ -8,7 +8,12 @@ import ReactDOM from 'react-dom/client'
 // import App6 from './App6.jsx'
 // import Counter from './App7.jsx'
 // import App8 from './App8.jsx'
-import Counter from './App9.jsx'
+// import Counter from './App9.jsx'
+// import App10 from './App10.jsx'
+// import App from './App11.jsx'
+// import App from './App12.jsx'
+// import App from './App13.jsx'
+import App from './App14.jsx'
 // import Hello from './Hello.jsx'
 // import Hello3 from './Hello.jsx'
 // import Hello4 from './Hello.jsx'
@@ -25,7 +30,12 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     {/* <HeaderText text="응🎈"/> */}
     {/* <Counter /> */}
     {/* <App8 /> */}
-    <Counter />
+    {/* <Counter /> */}
+    {/* <App10 /> */}
+    {/* <App /> */}
+    {/* <App /> */}
+    {/* <App /> */}
+    <App />
   </React.StrictMode>,
 )
 

@@ -14,6 +14,6 @@ function Counter() {
     <button onClick={() => setCount((count) => count - 1)}>- 버튼</button>
   </>
   );
-}
+} 
 
 export default Counter

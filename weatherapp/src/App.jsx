@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import './App.css'
 
 function App() {
-
+  
   const [weather, setWeather] = useState({
     temp: '',
     desc: '',
@@ -10,14 +10,14 @@ function App() {
   });
 
   useEffect(() => {
-    fetch('https://api.openweathermap.org/data/2.5/weather?q=Seoul&units=Metric&APIkey=e651216af5b205d07a29b3b2b3a131b6')
+    fetch('https://api.openweathermap.org/data/2.5/weather?q=Seoul&units=Metric&APIkey=08315439ef75a9358a09e997111e70c9')
     .then(response => response.json())
     .then(result => {
       setWeather({
         temp: result.main.temp,
         desc: result.weather[0].description,
-        icon: result.weather[0].icon
-      })
+        icon: result.weather[0].icon,
+      });
     })
     .catch(err => console.log(err))
   }, []);
@@ -27,13 +27,15 @@ function App() {
       <>
         <p>온도 : {weather.temp} 도</p>
         <p>설명 : {weather.desc}</p>
-        <img src={`http://openweathermap.org/img/wn/${weather.icon}@2x.png`} alt='날씨 아이콘' />
+        <img src={`http://openweathermap.org/img/wn/${weather.icon}@2x.png`} alt="날씨 아이콘" />
       </>
     );
-  } 
-  else{
-    return <div>로딩중...</div>
   }
+  else {
+    return <div>로딩 중...</div>
+  }
+
+
 }
 
 export default App

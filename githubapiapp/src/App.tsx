@@ -1,33 +1,32 @@
-import { useState } from 'react'
-import axios from 'axios'
-import './App.css'
+import { useState } from 'react';
+import axios from 'axios';
+import './App.css';
 
 type Repository = {
-  id: number
+  id: number;
   full_name: string;
   html_url: string;
 };
 
 function App() {
-  const [keyword, setKeyword] = useState('');
-  const [repodata, setRepodata] = useState<Repository[]>([]);
+  const [ keyword, setKeyword ] = useState('');
+  const [ repodata, setRepodata ] = useState<Repository[]>([]);
 
   const handleClick = () => {
-    axios.get<{items: Repository[]}>(`https://api.github.com/search/repositories?q=${keyword}`)
-    .then(response=> setRepodata(response.data.items))
+    axios.get<{ items: Repository[]}>(`https://api.github.com/search/repositories?q=${keyword}`)
+    .then(response => setRepodata(response.data.items))
     .catch(err => console.log(err))
   }
 
-
   return (
     <>
-      <input 
+      <input
         value={keyword}
         onChange={e => setKeyword(e.target.value)}
+        placeholder='python_study_hard'
       />
-      <br />
-      <br />
-      <button onClick={handleClick}>fetch</button>
+      <br /><br />
+      <button onClick={handleClick}>Fetch</button>
       {repodata.length === 0 ? (
         <p>접근 가능한 데이터가 없습니다</p>
       ):(

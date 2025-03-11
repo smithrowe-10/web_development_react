@@ -43,6 +43,7 @@ function AddItem(props: AddItemProps) {
 
   return(
     <>
+    <br />
       <Button onClick={handleOpen}>
         Add Item
       </Button>

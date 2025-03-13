@@ -2,18 +2,8 @@ import Header2 from "./components/Header/Header2";
 import { CORE_CONCEPTS } from "./data";
 import CoreConcepts from "./components/CoreConcepts";
 import TapButton from "./components/TapButton";
-import { EXAMPLES } from "./data_updated";
 
 function App() {
-
-  // const [selectedTopic, setSelectedTopic] = useState('');
-
-  function handleSelect(selectedTopic) {
-    // selectedButton = 'components', 'jsx', 'props', 'state'
-    console.log(selectedTopic);
-  }
-
-
   return (
     <div>
       <Header2 />
@@ -30,12 +20,12 @@ function App() {
         <section id="examples">
           <h2>예시들</h2>
           <menu>
-            <button>Components</button>
+            {/* <button>Components</button>
             <button>JSX</button>
             <button>Props</button>
-            <button>State</button>
+            <button>State</button> */}
           </menu>
-          <TapButton onSelect={handleSelect(EXAMPLES.components)}>Components</TapButton>
+          <TapButton>Components</TapButton>
           <TapButton>JSX</TapButton>
           <TapButton>Props</TapButton>
           <TapButton>State</TapButton>

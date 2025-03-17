@@ -1,7 +1,7 @@
-import Header2 from "./components/Header/Header2";
 import { CORE_CONCEPTS } from "./data";
-import CoreConcepts from "./components/CoreConcepts";
-import TapButton from "./components/TapButton";
+import Header2 from "./components/Header/Header2";
+import CoreConcepts from "./components/CoreConcepts/CoreConcepts";
+import TabButton from "./components/TabButton";
 
 function App() {
   return (
@@ -11,7 +11,10 @@ function App() {
         <section id="core-concepts">
           <h2>핵심 개념들 of React</h2>
           <ul>
-            <CoreConcepts image={CORE_CONCEPTS[0].image} title={CORE_CONCEPTS[0].title} description={CORE_CONCEPTS[0].description} />
+            <CoreConcepts 
+              image={CORE_CONCEPTS[0].image} 
+              title={CORE_CONCEPTS[0].title} 
+              description={CORE_CONCEPTS[0].description} />
             <CoreConcepts {...CORE_CONCEPTS[1]}/>
             <CoreConcepts {...CORE_CONCEPTS[2]}/>
             <CoreConcepts {...CORE_CONCEPTS[3]}/>
@@ -20,17 +23,17 @@ function App() {
         <section id="examples">
           <h2>예시들</h2>
           <menu>
-            {/* <button>Components</button>
-            <button>JSX</button>
-            <button>Props</button>
-            <button>State</button> */}
+            {/* <TabButton>Components</TabButton>
+            <TabButton>JSX</TabButton>
+            <TabButton>Props</TabButton>
+            <TabButton>State</TabButton> */}
+            <TabButton label='Components' />
+            <TabButton label='JSX' />
+            <TabButton label='Props' />
+            <TabButton label='State' />
           </menu>
-          <TapButton>Components</TapButton>
-          <TapButton>JSX</TapButton>
-          <TapButton>Props</TapButton>
-          <TapButton>State</TapButton>
+          동적인 버튼 클릭의 결과물
         </section>
-        동적인 버튼의 결과물 
       </main>
     </div>
   );

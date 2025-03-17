@@ -1,8 +1,10 @@
-import  Button  from "@mui/material/Button";
+import Button from '@mui/material/Button';
 
 function ClickButton() {
-  return(
-    <Button variants="contained" color="primary">클릭하소 ㅋㅋ</Button>
+  return (
+    <Button variant="contained" color="secondary">
+      클릭하세요
+    </Button>
   );
 }
 

@@ -1,13 +1,13 @@
 import './App.css'
-import Main from './components/Main'
+import Main from './components/Main';
 
 function App() {
 
   return (
     <>
-      <h1>K-POP 플레이 리스트 🎨</h1>
-      <Main/> 
-    </> 
+      <h1>K-POP 플레이 리스트🧨</h1>
+      <Main />
+    </>
   )
 }
 

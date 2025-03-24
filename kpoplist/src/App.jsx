@@ -1,6 +1,6 @@
+import './App.css';
+import Main from './components/Main';
 import { useState } from 'react';
-import './App.css'
-import Main from './Components/Main';
 
 function App() {
   const data = [
@@ -11,7 +11,7 @@ function App() {
       gender: "female",
     },
     {
-      title: "Fell My Rhythm",
+      title: "Feel My Rhythm",
       artist: "Red Velvet",
       releaseDate: "2022.03.21",
       gender: "female",
@@ -30,7 +30,7 @@ function App() {
     },
     {
       title: "Rush Hour",
-      artist: "Crush",
+      artist: "Crush (feat. j-hope of BTS)",
       releaseDate: "2022.09.22",
       gender: "male",
     },
@@ -43,7 +43,7 @@ function App() {
       <h1>K-POP 플레이 리스트</h1>
       <Main data={data} playlist={playlist} setPlaylist={setPlaylist} />
     </>
-  )
+  );
 }
 
 export default App;

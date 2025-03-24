@@ -1,7 +1,7 @@
 import { useReducer } from 'react';
 import './App.css'
 import LoginForm from './components/LoginForm';
-import Reducer from './reducer/reducer';
+import Reducer from './reducer/Reducer';
 
 function App() {
 

@@ -13,12 +13,12 @@ function App() {
     console.log(selectedTopic);
     setSelectedTopic(selectedTopic);
   }
-  // React에서는 변수의 데이터에 HTML 코드를 삽입할 수 있습니다.
+  // React에서는 변수의 데이터에 HTML 코드를 삽입할 수 있음.
   let tabContent = (
     <>
-      <p>Please Select a Topic😀</p>
+      <p>Please Select a Topic.🎞</p>
     </>
-);
+  );
 
   // 버튼을 클릭했을 때 해당 내용을 참조하여 내용이 출력되어야 함.
 
@@ -33,10 +33,10 @@ function App() {
           </code>
         </pre>
       </>
-    )
+    );
   }
 
-  
+
   return (
     <div>
       <Header2 />

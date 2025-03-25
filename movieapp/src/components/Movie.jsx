@@ -1,15 +1,20 @@
-function Movie(props) {
+import { Link } from "react-router-dom";
 
+function Movie({ id, coverImg, title, summary, genres }) {
   return (
-    <div key={props.movie.id}>
-      <img src={props.movie.medium_cover_image} alt={props.movie.title} />
-      <h2>{props.movie.title}</h2>
-      <p>{props.movie.summary}</p>
+    <div>
+      <img src={coverImg} alt={title} />
+      <h2>
+        <Link to={`/moive/${id}`}>{title}</Link>
+      </h2>
+      <p>{summary}</p>
       <ul>
-        {props.movie.genres.map((genre) => (<li key={genre}>{genre}</li>))}
+        {genres.map((genre) => (<li key={genre}>{genre}</li>))}
       </ul>
     </div>
-  );
+  )
 }
 
 export default Movie;
+
+// https://yts.mx/api/v2/movie_details.json?movie_id=${id}

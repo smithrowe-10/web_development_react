@@ -11,29 +11,30 @@ function App() {
     const json = await response.json();
     setMovies(json.data.movies);
     setLoading(false);
-  } // 이걸 useEffect에 넣어서 렌더링 될 때 한 번만 getMovies라는 함수를 실행시키겠다
+  } // -> 이걸 useEffect에 넣어서 렌더링 될 때 한 번만 getMovies라는 함수를 실행시키겠다
 
   useEffect(() => {
     getMovies();
-  }, [])
+  }, []);
 
-  // console.log(movies); // 장르 받아올건데 장르가 배열로 되어있습니다.
+  //console.log(movies);  // 장르 받아올건데 장르가 배열로 되어있습니다.
+
 
   return (
     <div>
-      {loading ? <h1>로딩 중...</h1> : <div>{movies.map(movie => 
-          <div key={movie.id}>
-            <img src={movie.medium_cover_image} alt={movie.title} />
+      {loading ? <h1>로딩 중...🚗</h1> : <div>{movies.map(movie => 
+        <div key={movie.id}>
+          <img src={movie.medium_cover_image} alt={movie.title} />
           <h2>{movie.title}</h2>
           <p>{movie.summary}</p>
           <ul>
             {movie.genres.map((genre) => (<li key={genre}>{genre}</li>))}
           </ul>
-          </div>
+        </div>
       )}</div>
       }
     </div>
   )
 }
 
-export default App;
+export default App
